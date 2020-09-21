@@ -26,10 +26,9 @@ return elements in Last In First Out order.
 #     def pop(self):
 #         if self.__len__() == 0:
 #             return None
-#         else:
-#             pop_value = self.storage[-1]
-#             del self.storage[-1]
-#             return pop_value
+#         pop_value = self.storage[-1]
+#         del self.storage[-1]
+#         return pop_value
 
 
 class Node:
@@ -56,8 +55,7 @@ class LinkedList:
     def get_tail(self):
         if self.tail == None:
             return None
-        else:
-            return self.tail.get_value()
+        return self.tail.get_value()
 
     def add_to_tail(self, value):
         new_node = Node(value)
