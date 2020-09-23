@@ -59,7 +59,7 @@ class BSTNode:
             # otherwise
             else:
                 # return a call of contains on the left child passing in the target value
-                return self.left.contains(value)
+                return self.left.contains(target)
         # otherwise (the target is greater than the current nodes value)
         else:
             # if there is no right child already here
@@ -88,17 +88,17 @@ class BSTNode:
         # if there is a node to the left
         if self.left:
             # call the function on the left value
-            fn(self.left.value)
+            self.left.for_each(fn)
         # if there is a node to the right
         if self.right:
             # call the function on the right node
-            fn(self.right.value)
+            self.right.for_each(fn)
 
     # Part 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
-    def in_order_print(self):
+    def in_order_print(self, node):
         values = []
         pass
 

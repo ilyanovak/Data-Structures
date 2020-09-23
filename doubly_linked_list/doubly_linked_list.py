@@ -28,15 +28,15 @@ class DoublyLinkedList:
     """
     def add_to_head(self, value):
         if self.__len__() == 0:
-            self.head = ListNode(value, prev=None, next=None)
+            self.head = ListNode(value)
             self.tail = self.head
             self.length += 1
         elif self.__len__() == 1:
-            self.head = ListNode(value, prev=self.tail, next=None)
+            self.head = ListNode(value, prev=self.tail)
             self.tail.next = self.head
             self.length += 1
         else:
-            new_head = ListNode(value, prev=self.head, next=None)
+            new_head = ListNode(value, prev=self.head)
             self.head.next = new_head
             self.head = new_head
             self.length += 1
