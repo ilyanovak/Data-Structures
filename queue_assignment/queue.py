@@ -33,7 +33,6 @@ Stretch: What if you could only use instances of your Stack class to implement t
 #             del self.storage[0]
 #             return remove_value
 
-
 class Node:
     def __init__(self, value, next_node=None):
         self.value = value
@@ -93,7 +92,6 @@ class LinkedList:
             self.head = self.head.get_next()
             self.length -= 1
             return head_value
-
 
 class Queue:
     def __init__(self):
